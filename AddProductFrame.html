@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./AddProductFrame.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Paytone One:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="add-product-frame">
+      <div class="add-product-frame-inner">
+        <div class="rectangle-div"></div> 
+      </div>
+      <div class="add-product-frame-child">
+        <div class="rectangle-group">
+          <div class="group-child4"></div>
+          <div class="description-group">
+            <div class="description1">Description</div>
+            <input
+              class="group-child5"
+              type="text"
+              minlength="{1}"
+              readonly
+              id="descproductinput"
+            />
+          </div>
+          <div class="product-name-group">
+            <div class="description1">Product Name</div>
+            <input
+              class="group-child6"
+              type="text"
+              minlength="{4}"
+              required
+              id="productinput"
+            />
+          </div>
+          <div class="price-group">
+            <div class="price1">Price</div>
+            <div class="pcs1">/pcs</div>
+            <input
+              class="group-child7"
+              type="number"
+              min="{1}"
+              required
+              id="priceproductinput"
+            />
+
+            <div class="group-child8"></div>
+          </div>
+          <div class="upload-photo1">Upload Photo</div>
+          <div class="idr1">IDR</div>
+          <img class="vector-icon1" alt="" src="./public/vector.svg" />
+
+          <div class="group-child9"></div>
+          <div class="frame-group">
+            <button class="save-container">
+              <div class="save1">Save</div>
+            </button>
+            <button class="cancel-container">
+              <div class="save1">Cancel</div>
+            </button>
+          </div>
+          <img
+            class="material-symbolsphoto-camera-icon1"
+            alt=""
+            src="./public/materialsymbolsphotocameraoutline.svg"
+          />
+
+          <div class="group-child10"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

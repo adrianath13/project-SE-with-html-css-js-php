@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign Up Page</title>
+    <link rel="icon" type="image/jpg" href="./public/favicon.png">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./SignUp.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Paytone One:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="sign-up1">z
+      <div class="by-creating-an-container">
+        <p class="by-creating-an">
+          By creating an account, I agree with Sell-It-Safe’s
+        </p>
+        <p class="by-creating-an">Privacy Policy and Terms of Services</p>
+      </div>
+      <button class="sign-up2" id="submitButton">
+        <div class="submit2">Submit</div>
+      </button>
+
+      <form name="form-signup" method="POST" action="SignUp.php">
+        <input
+          class="password1"
+          type="password"
+          minlength="{8}"
+          required
+          id="passwordinputsignup"
+          placeholder="Password"
+        />
+ 
+        <div class="role" id="roleinputsignup"> 
+          <select name="roles" id="roles" required="">
+            <option value="" disabled>Select a Role</option>
+            <option value="Owner">Owner</option>
+            <option value="Cashier">Cashier</option>
+          </select>
+        </div>
+
+
+        <input class="email1" type="email" required id="emailinputsignup" placeholder="Email Address" />
+
+        <input class="last-name" type="text" required id="lastnameinputsignup" placeholder="Last Name"/>
+
+        <input
+          class="first-name"
+          type="text"
+          required
+          id="firstnameinputsignup"
+          placeholder="First Name"
+        />
+      </form>
+      
+
+      <div class="or-line">
+        <div class="or">or</div>
+        <img class="or-line-child" alt="" src="./public/line-1.svg" />
+        <img class="or-line-child1" alt="" src="./public/line-1.svg" />
+      </div>
+      <button class="sign-up-with-google" id="signUpWithGoogle">
+        <div class="sign-up-with-google-child"></div>
+        <div class="sign-up-with">Sign up with Google</div>
+        <img
+          class="google-logos-by-hrhasnai-1"
+          alt=""
+          src="./public/google-logos-by-hrhasnai-1@2x.png"
+        />
+      </button>
+      <div class="create-account">Create Account</div>
+      <div class="bg21">
+        <img class="bgpurple-icon1" alt="" src="./public/bgpurple1.svg" />
+
+        <button class="sign-up3" id="signUp1">
+          <div class="log-in2">Log In</div>
+        </button>
+        <div class="already-have-an">Already have an account?</div>
+      </div>
+    </div>
+
+    <script>
+      var signUpWithGoogle = document.getElementById("signUpWithGoogle");
+      if (signUpWithGoogle) {
+        signUpWithGoogle.addEventListener("click", function () {
+          window.open("https://accounts.google.com/login?hl=id");
+        });
+      }
+      
+      if(signUp1) {
+        signUp1.addEventListener("click", function (e) {
+          window.location.href = "login.html";
+        });
+      }
+      
+
+      function validateSignUpForm() {
+        var firstName = document.forms["form-signup"]["firstnameinputsignup"].value;
+        var lastName = document.forms["form-signup"]["lastnameinputsignup"].value;
+        var email = document.forms["form-signup"]["emailinputsignup"].value;
+        var password = document.forms["form-signup"]["passwordinputsignup"].value;
+        var submitButton = document.getElementById("submitButton");
+
+        if (firstName === "") {
+          alert("Please enter the First Name");
+          document.forms["form-signup"]["firstnameinputsignup"].focus();
+          return false;
+        }
+
+        if (lastName === "") {
+          alert("Please enter the Last Name");
+          document.forms["form-signup"]["lastnameinputsignup"].focus();
+          return false;
+        }
+
+        if (email === "") {
+          alert("Please enter the Email Address");
+          document.forms["form-signup"]["emailinputsignup"].focus();
+          return false;
+        }
+
+        if (password === "") {
+          alert("Please enter the password");
+          document.forms["form-signup"]["passwordinputsignup"].focus();
+          return false;
+        }
+
+        
+        if(password.length < 8) {
+          alert("Password length must be atleast 8 characters"); 
+          document.forms["form-signup"]["passwordinputsignup"].focus();
+          return false; 
+        }
+
+        return true;
+      }
+
+      if (submitButton) {
+        submitButton.addEventListener("click", function (event) {
+          event.preventDefault();
+
+      if (validateSignUpForm()) {
+        var popup = document.createElement("div");
+        popup.className = "popup";
+
+        var message = document.createElement("p");
+        message.textContent = "Register successful!";
+
+        var okButton = document.createElement("button");
+        okButton.textContent = "OK";
+        okButton.addEventListener("click", function () {
+        window.location.href = "login.html";
+      });
+
+      popup.appendChild(message);
+      popup.appendChild(okButton);
+      document.body.appendChild(popup);
+      }
+    });}
+
+      
+      </script>
+  </body>
+</html>

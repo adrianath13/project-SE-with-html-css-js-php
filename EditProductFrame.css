@@ -1,0 +1,241 @@
+.group-child {
+  border-radius: var(--br-xl);
+  background-color: var(--color-white);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+}
+.edit-product-frame-inner,
+.group-child,
+.group-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 593px;
+  height: 625px;
+}
+.group-item {
+  left: 165px;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-gainsboro);
+  width: 203px;
+  height: 140px;
+}
+.description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 500;
+}
+.group-inner {
+  border: 1.5px solid var(--color-palevioletred-100);
+  background-color: var(--color-white);
+  position: absolute;
+  top: 24.56px;
+  left: 0;
+  border-radius: var(--br-5xs);
+  box-sizing: border-box;
+  width: 533px;
+  height: 75.44px;
+}
+.description-parent,
+.rectangle-input {
+  position: absolute;
+  top: 296px;
+  left: 0;
+  width: 533px;
+  height: 100px;
+}
+.rectangle-input {
+  border: 1.5px solid var(--color-palevioletred-100);
+  background-color: var(--color-white);
+  top: 27px;
+  border-radius: var(--br-5xs);
+  box-sizing: border-box;
+  height: 39px;
+}
+.product-name-parent {
+  position: absolute;
+  top: 209px;
+  left: 0;
+  width: 533px;
+  height: 66px;
+}
+.pcs,
+.price {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32.6px;
+}
+.pcs {
+  left: 405px;
+}
+.group-child1,
+.group-child2 {
+  border: 1.5px solid var(--color-palevioletred-100);
+  background-color: var(--color-white);
+  position: absolute;
+  top: 27px;
+  left: 0;
+  border-radius: var(--br-5xs);
+  box-sizing: border-box;
+  width: 399px;
+  height: 39px;
+}
+.group-child2 {
+  left: 405px;
+  width: 128px;
+}
+.price-parent {
+  position: absolute;
+  top: 417px;
+  left: 0;
+  width: 533px;
+  height: 66px;
+}
+.idr,
+.upload-photo {
+  position: absolute;
+  top: 150px;
+  left: 222px;
+  font-weight: 500;
+}
+.idr {
+  top: 453px;
+  left: 21px;
+  color: var(--color-gray-700);
+}
+.vector-icon {
+  position: absolute;
+  height: 0.84%;
+  width: 1.35%;
+  top: 83.97%;
+  right: 97.15%;
+  bottom: 15.19%;
+  left: 1.5%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.line-div {
+  position: absolute;
+  top: 449.5px;
+  left: 46.5px;
+  border-right: 1px solid var(--color-gray-700);
+  box-sizing: border-box;
+  width: 1px;
+  height: 28px;
+}
+.save {
+  position: relative;
+  font-size: var(--font-size-smi);
+  font-weight: 600;
+  font-family: var(--font-poppins);
+  color: var(--color-darkslateblue-100);
+  text-align: center;
+}
+.cancel-wrapper,
+.save-wrapper {
+  cursor: pointer;
+  padding: var(--padding-5xs) var(--padding-11xl);
+  position: absolute;
+  top: 0;
+  border-radius: var(--br-xl);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.save-wrapper {
+  border: 0;
+  background-color: var(--color-palegoldenrod-100);
+  left: 146px;
+}
+.cancel-wrapper {
+  border: 1.5px solid var(--color-darkslateblue-100);
+  background-color: var(--color-white);
+  left: 0;
+  box-sizing: border-box;
+  width: 93px;
+}
+.frame-parent {
+  position: absolute;
+  top: 513px;
+  left: 147px;
+  width: 239px;
+  height: 36px;
+}
+.material-symbolsphoto-camera-icon {
+  position: absolute;
+  top: 40px;
+  left: 237px;
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+}
+.group-child3 {
+  position: absolute;
+  top: 169.5px;
+  left: 221.5px;
+  border-top: 1px solid var(--color-black);
+  box-sizing: border-box;
+  width: 90px;
+  height: 1px;
+}
+.rectangle-parent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 533px;
+  height: 549px;
+  color: var(--color-darkslateblue-100);
+}
+.chocolate-whipped-cream,
+.sweet-croissant-with {
+  position: absolute;
+  top: 321px;
+  left: 2px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 272px;
+  height: 34px;
+}
+.chocolate-whipped-cream {
+  top: 238px;
+  left: 0;
+}
+.div,
+.div1 {
+  position: absolute;
+  top: 453px;
+  left: 55px;
+  font-weight: 500;
+}
+.div1 {
+  left: 417px;
+}
+.group-parent {
+  position: absolute;
+  top: 38px;
+  left: 30px;
+  width: 533px;
+  height: 549px;
+}
+.edit-product-frame {
+  position: relative;
+  width: 593px;
+  height: 625px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+  text-align: center;
+  font-size: var(--font-size-smi);
+  color: var(--color-black);
+  font-family: var(--font-poppins);
+}

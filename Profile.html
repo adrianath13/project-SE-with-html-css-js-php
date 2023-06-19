@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Profile Page</title>
+    <link rel="icon" type="image/jpg" href="./public/favicon.png">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./Profile.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Paytone One:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="profile5">
+      <div class="bgwhite7"></div>
+      <div class="role1">
+        <div class="role2"></div>
+        <div class="roleaccount">RoleAccount</div>
+      </div>
+      <div class="data">
+        <button class="update-profile-button">
+          <div class="update-profile">Update profile</div>
+        </button>
+        <div class="first-name1">
+          <input class="first-name-child" type="text" required id="fullname" />
+
+          <div class="full-name">Full Name</div>
+        </div>
+        <div class="first-name2">
+          <input class="first-name-child" type="text" required id="username" />
+
+          <div class="full-name">Username</div>
+        </div>
+        <div class="phone-number">
+          <input
+            class="first-name-child"
+            type="number"
+            min="{11}"
+            max="{14}"
+            required
+          />
+          <div class="full-name">Phone Number</div>
+        </div>
+        <div class="password2">
+          <input
+            class="password-child"
+            type="password"
+            minlength="{8}"
+            required
+            id="password"
+          />
+          
+          <div class="full-name">Password</div>
+          <button class="reset-password" id="forgotPasswordButton">Reset Password</button>
+        </div>
+        <div class="email2">
+          <div class="email-address">Email Address</div>
+          <input class="password-child" type="text" required id="email" />
+        </div>
+        <div class="brand-name">
+          <div class="brand-id">Brand Name</div>
+          <div class="brand-name-child">
+            <div class="brand-name-input" type="text"></div>
+          </div>
+        </div>
+        <div class="brandid">
+          <div class="brand-id">Brand ID</div>
+          <input
+            class="brandid-child"
+            type="text"
+            minlength="{6}"
+            required
+            id="BrandID"
+          />
+        </div>
+      </div>
+      <img class="profile-child" alt="" src="./public/line-8.svg" />
+
+      <!-- <div class="profileimg"></div>
+      <div class="photosection">
+        <button class="upload-photo-wrapper">
+          <input class="upload-photo2">Upload photo</div>
+        </button>
+        <button class="remove-photo-wrapper">
+          <div class="update-profile">Remove photo</div>
+        </button>
+      </div> -->
+      <div class="photosection">
+        <div class="profileimg" id="profile-photo-preview" src="./public/default-profile-photo.jpg" alt="Profile Photo"></div>
+        <button class="upload-photo-wrapper" id="upload-photo-btn">Upload photo</button>
+        <button class="remove-photo-wrapper" id="remove-photo-btn">Remove photo</button>
+      </div>
+
+      <div class="profile-photo-section">
+        <img id="profile-photo-preview" src="default-profile-photo.jpg" alt="Profile Photo">
+        <input id="profile-photo-input" type="file" accept="image/*">
+        <button id="upload-photo-btn">Upload Photo</button>
+        <button id="remove-photo-btn">Remove Photo</button>
+      </div>
+
+      <div class="profilepage">
+        <img class="ggprofile-icon" alt="" src="./public/ggprofile.svg" />
+
+        <div class="profile6">Profile</div>
+      </div>
+      <div class="sidenavbar5">
+        <button class="chevrons-left5">
+          <img class="vector-icon41" alt="" src="./public/vector11.svg" />
+
+          <img class="vector-icon42" alt="" src="./public/vector12.svg" />
+        </button>
+        <img
+          class="logo-nyoba2-icon5"
+          alt=""
+          src="./public/logo-nyoba2@2x.png"
+        />
+
+        <div class="profile7">
+          <div class="ownername7">OwnerName</div>
+          <img class="guy-4-icon5" alt="" src="./public/ownerprofile.svg" />
+        </div>
+        <div class="logout5" id="logoutContainer">
+          <img class="log-out-icon5" alt="" src="./public/logout4.svg" />
+
+          <div class="log-out5">Log Out</div>
+        </div>
+        <div class="menu5">
+          <div class="dashbord5" id="dashbordContainer">
+            <img class="grid-icon5" alt="" src="./public/grid.svg" />
+
+            <div class="profile6">Dashboard</div>
+          </div>
+          <div class="selfreport5" id="selfreportContainer">
+            <img class="grid-icon5" alt="" src="./public/bookopen.svg" />
+
+            <div class="profile6">Sell-Report</div>
+          </div>
+          <div class="product17" id="productContainer">
+            <img class="grid-icon5" alt="" src="./public/box5.svg" />
+
+            <div class="profile6">Product</div>
+          </div>
+          <div class="notif5" id="notifContainer">
+            <img class="grid-icon5" alt="" src="./public/bell1.svg" />
+
+            <div class="profile6">Notification</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const profilePhotoInput = document.getElementById('profile-photo-input');
+      const profilePhotoPreview = document.getElementById('profile-photo-preview');
+      const uploadPhotoBtn = document.getElementById('upload-photo-btn');
+      const removePhotoBtn = document.getElementById('remove-photo-btn');
+
+    
+      // Event listener for profile photo input change
+      profilePhotoInput.addEventListener('change', function (event) {
+        const file = event.target.files[0];
+        const reader = new FileReader();
+    
+        reader.onload = function (e) {
+          profilePhotoPreview.setAttribute('src', e.target.result);
+        };
+    
+        reader.readAsDataURL(file);
+      });
+    
+      // Event listener for upload photo button click
+      uploadPhotoBtn.addEventListener('click', function () {
+        profilePhotoInput.click();
+      });
+    
+      // Event listener for remove photo button click
+      removePhotoBtn.addEventListener('click', function () {
+        profilePhotoPreview.setAttribute('src', './public/default-profile-photo.jpg');
+        profilePhotoInput.value = '';
+      });
+
+      var forgotPasswordButton = document.getElementById("forgotPasswordButton");
+      if (forgotPasswordButton) {
+        forgotPasswordButton.addEventListener("click", function (e) {
+          e.preventDefault();
+          alert("Forgot password request already been sent to email");
+        });
+      }
+
+      var logoutContainer = document.getElementById("logoutContainer");
+      if (logoutContainer) {
+        logoutContainer.addEventListener("click", function (e) {
+          window.location.href = "login.html";
+        });
+      }
+      
+      var dashbordContainer = document.getElementById("dashbordContainer");
+      if (dashbordContainer) {
+        dashbordContainer.addEventListener("click", function (e) {
+          window.location.href = "./Dashboard.html";
+        });
+      }
+      
+      var selfreportContainer = document.getElementById("selfreportContainer");
+      if (selfreportContainer) {
+        selfreportContainer.addEventListener("click", function (e) {
+          window.location.href = "./ReportProduct.html";
+        });
+      }
+      
+      var productContainer = document.getElementById("productContainer");
+      if (productContainer) {
+        productContainer.addEventListener("click", function (e) {
+          window.location.href = "./Product.html";
+        });
+      }
+      
+      var notifContainer = document.getElementById("notifContainer");
+      if (notifContainer) {
+        notifContainer.addEventListener("click", function (e) {
+          window.location.href = "./Notification.html";
+        });
+      }
+      </script>
+  </body>
+</html>

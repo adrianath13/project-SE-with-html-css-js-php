@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./EditProductFrame.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Paytone One:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="edit-product-frame">
+      <div class="edit-product-frame-inner">
+        <div class="group-child"></div>
+      </div>
+      <div class="group-parent">
+        <div class="rectangle-parent">
+          <div class="group-item"></div>
+          <div class="description-parent">
+            <div class="description">Description</div>
+            <input
+              class="group-inner"
+              type="text"
+              minlength="{1}"
+              required
+              id="descproductinput"
+            />
+          </div>
+          <div class="product-name-parent">
+            <div class="description">Product Name</div>
+            <input
+              class="rectangle-input"
+              type="text"
+              minlength="{4}"
+              required
+              id="editproductinput"
+            />
+          </div>
+          <div class="price-parent">
+            <div class="price">Price</div>
+            <div class="pcs">/pcs</div>
+            <input
+              class="group-child1"
+              type="number"
+              min="{1}"
+              required
+              id="priceproductinput"
+            />
+
+            <input
+              class="group-child2"
+              type="text"
+              minlength="{0}"
+              required
+              id="stock"
+            />
+          </div>
+          <div class="upload-photo">Upload Photo</div>
+          <div class="idr">IDR</div>
+          <img class="vector-icon" alt="" src="./public/vector.svg" />
+
+          <div class="line-div"></div>
+          <div class="frame-parent">
+            <button class="save-wrapper">
+              <div class="save">Save</div>
+            </button>
+            <button class="cancel-wrapper">
+              <div class="save">Cancel</div>
+            </button>
+          </div>
+          <img
+            class="material-symbolsphoto-camera-icon"
+            alt=""
+            src="./public/materialsymbolsphotocameraoutline.svg"
+          />
+
+          <div class="group-child3"></div>
+        </div>
+        <div class="sweet-croissant-with">
+          Sweet croissant with chocolate inside
+        </div>
+        <div class="chocolate-whipped-cream">
+          Chocolate Whipped Cream Croissant
+        </div>
+        <div class="div">50.000</div>
+        <div class="div1">2</div>
+      </div>
+    </div>
+  </body>
+</html>

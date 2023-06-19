@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+.popup-overlay {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+:root {
+  /* fonts */
+  --font-poppins: Poppins;
+  --font-paytone-one: "Paytone One";
+  --font-inter: Inter;
+
+  /* font sizes */
+  --font-size-smi: 13px;
+  --font-size-21xl: 40px;
+  --font-size-13xl: 32px;
+  --font-size-base: 16px;
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-5xl: 24px;
+  --font-size-3xs: 10px;
+  --font-size-lg: 18px;
+  --font-size-2xs: 11px;
+  --font-size-mini: 15px;
+
+  /* Colors */
+  --color-black: #000;
+  --color-darkslateblue-100: #581345;
+  --color-darkslateblue-200: #460f37;
+  --color-darkslateblue-300: rgba(88, 19, 69, 0.2);
+  --color-white: #fff;
+  --color-palegoldenrod-100: #e8f2a8;
+  --color-palegoldenrod-200: rgba(232, 242, 168, 0.2);
+  --color-gray-100: rgba(0, 0, 0, 0.59);
+  --color-gray-200: rgba(0, 0, 0, 0.54);
+  --color-gray-300: rgba(0, 0, 0, 0.45);
+  --color-gray-400: rgba(0, 0, 0, 0.4);
+  --color-gray-500: rgba(0, 0, 0, 0.5);
+  --color-gray-600: rgba(0, 0, 0, 0.3);
+  --color-gray-700: rgba(0, 0, 0, 0.2);
+  --color-palevioletred-100: #7a3e65;
+  --color-palevioletred-200: rgba(107, 33, 70, 0.6);
+  --color-palevioletred-300: rgba(122, 62, 101, 0.15);
+  --color-palevioletred-400: rgba(122, 62, 101, 0.5);
+  --color-gainsboro: #d9d9d9;
+  --color-snow-100: #fffbf6;
+  --color-snow-200: #fdf8f4;
+  --color-firebrick: #b52323;
+  --color-purple: #6a1753;
+
+  /* Gaps */
+  --gap-xs: 12px;
+  --gap-9xs: 4px;
+  --gap-5xs: 8px;
+  --gap-6xs: 7px;
+  --gap-49xl: 68px;
+  --gap-48xl: 67px;
+  --gap-8xl: 27px;
+
+  /* Paddings */
+  --padding-5xs: 8px;
+  --padding-11xl: 30px;
+  --padding-6xs: 7px;
+  --padding-mini-2: 14.2px;
+  --padding-sm: 14px;
+  --padding-3xs: 10px;
+  --padding-0: 0px;
+  --padding-mini: 15px;
+  --padding-41xl: 60px;
+  --padding-xs: 12px;
+  --padding-20xl: 39px;
+  --padding-6xl: 25px;
+
+  /* border radiuses */
+  --br-xl: 20px;
+  --br-5xs: 8px;
+  --br-3xs: 10px;
+  --br-8xs: 5px;
+  --br-mini: 15px;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.popup p {
+  margin-bottom: 10px;
+}
+

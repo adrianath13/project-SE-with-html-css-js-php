@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Page</title>
+    <link rel="icon" type="image/jpg" href="./public/favicon.png">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./login.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Paytone One:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
+    />
+ 
+  </head>
+  <body>
+    <div class="login">
+      <div class="bgwhite"></div>
+      <button class="forgot-password" id="forgotPasswordButton">Forgot password?</button>
+      <button class="dont-have-an" id="dontHaveAn">
+        Don’t have an account?
+      </button>
+      <button class="submit" id="submitButton">
+        <div class="submit1">Submit</div>
+      </button>
+      <form name="form-login" action="login.php" method="POST">
+        <input
+          class="password"
+          type="password"
+          minlength="8"
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          required
+          name="passwordlogin"
+          placeholder="Password"
+        />
+        
+        <input class="email" type="email" required name="emaillogin" placeholder="Email Address" />
+      </form>
+      <div class="good-to-see">Good to see you again!</div>
+      <div class="log-in">Log In</div>
+      <div class="bg2">
+        <img class="bgpurple-icon" alt="" src="./public/bgpurple.svg" />
+        <button class="sign-up" id="signUpButton">
+          <div class="log-in1">Sign Up</div>
+        </button>
+        <div class="new-here">New Here?</div>
+      </div>
+    </div>
+
+    <script>
+      var dontHaveAn = document.getElementById("dontHaveAn");
+      var signUpButton = document.getElementById("signUpButton");
+      var submitButton = document.getElementById("submitButton");
+      var forgotPasswordButton = document.getElementById("forgotPasswordButton");
+
+      if (forgotPasswordButton) {
+        forgotPasswordButton.addEventListener("click", function (e) {
+          e.preventDefault();
+          alert("Forgot password request already been sent to email");
+        });
+      }
+      if (dontHaveAn) {
+        dontHaveAn.addEventListener("click", function (e) {
+          window.location.href = "./SignUp.html";
+        });
+      }
+
+      if (signUpButton) {
+        signUpButton.addEventListener("click", function (e) {
+          window.location.href = "./SignUp.html";
+        });
+      }
+
+      function validateEmail() {
+        var emailID = document.forms["form-login"]["emaillogin"].value;
+        var emailRegex = /^[\w.-]+@([\w-]+\.)+[\w]{2,}$/;
+
+        if (!emailRegex.test(emailID)) {
+          alert("Please enter a valid email address");
+          document.forms["form-login"]["emaillogin"].focus();
+          return false;
+        }
+        return true;
+      }
+
+      function validateForm() {
+        var password = document.forms["form-login"]["passwordlogin"].value;
+        
+        if (password === "") {
+          alert("Please enter the password");
+          document.forms["form-login"]["passwordlogin"].focus();
+          return false;
+        }
+        
+        if(password.length < 8) {
+          alert("Password length must be atleast 8 characters"); 
+          document.forms["form-login"]["passwordlogin"].focus();
+          return false; 
+        }
+
+        return true;
+      }
+
+      if (submitButton) {
+        submitButton.addEventListener("click", function (event) {
+          event.preventDefault();
+
+          if (validateEmail() && validateForm()) {
+            window.location.href = "dashboard.html";
+          }
+        });
+        }
+
+    </script>
+  </body>
+</html>
